@@ -63,7 +63,6 @@ void main()
 }
  
 
-/* Count stack elements */
 void yigin_sayac()
 {
     printf("\n Yigin Eleman Sayisi : %d", sayac);
