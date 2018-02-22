@@ -26,7 +26,7 @@ void main()
     printf("\n 5 - Yigin Sayaci");
     printf("\n 6 - reset");
  
-    top = NULL; // ba˛lang˝Áta null yap˝yoruz
+    top = NULL; // ba√ælangi√ßta null yapiyoruz
  
     while (1)
     {
@@ -72,19 +72,19 @@ void yigin_sayac()
 /************************** Push Kismi ***************************///buketecrinozturk
 void push(int data)
 {
-	// gelen her veri ˆne geciyor
-    if (top == NULL) // bellek bo˛sa ilk veriyi ekliyoruz
+	// gelen her veri √∂ne geciyor
+    if (top == NULL) // bellek bossa ilk veriyi ekliyoruz
     {
         top =(struct node *)malloc(1*sizeof(struct node)); // bellekten yer ayiriyoruz
-        top->next = NULL; // top d¸¸m¸n next h¸cresini null yap˝yoruz
-        top->data = data; // top i˛aretÁisinin gˆstedigi yerin datasina gelen datayi ekliyoruz
+        top->next = NULL; // top d√ºg√ºm√ºn next h√ºcresini null yapiyoruz
+        top->data = data; // top i√æaret√ßisinin g√∂stedigi yerin datasina gelen datayi ekliyoruz
     }
     else // bellekte veri var ise 
     {
         temp =(struct node *)malloc(1*sizeof(struct node));// bellekten yer ayiriyoruz
-        temp->next = top; // temp i˛aretÁinin next h¸cresinin top d¸¸m¸ gˆstermesini sal˝yoruz 
-        temp->data = data;// temp i˛aretÁinin datas˝na gelen datay˝ ekliyoruz
-        top = temp;// temp art˝k top oldu
+        temp->next = top; // temp isaret√ßinin next h√ºcresinin top d√ºg√ºm√º g√∂stermesini sagliyoruz 
+        temp->data = data;// temp isaret√ßinin datasina gelen datayi ekliyoruz
+        top = temp;// temp artik top oldu
     }
     sayac++;
 }
@@ -93,17 +93,17 @@ void pop()
 {
     temp_top = top;
  
-    if (temp_top == NULL) // Stack bo˛ ise
+    if (temp_top == NULL) // Stack bos ise
     {
         printf("\n !!! Yiginda Eleman Yok");
         return;
     }
     else
-        temp_top = temp_top->next; // Bir sonraki eleman˝ gˆster
+        temp_top = temp_top->next; // Bir sonraki elemani g√∂ster
     printf("\n Cikarilan Eleman : %d", top->data);
     free(top);
     top = temp_top;
-    sayac--; // Eleman sayisini bulmak iÁin
+    sayac--; // Eleman sayisini bulmak i√ßin
 }
  
 /************************** Listele Kismi ***************************///buketecrinozturk
@@ -129,12 +129,12 @@ void reset()
 {
     temp_top = top;
  
-    while (temp_top != NULL) // Liste bo˛ olana kadar
+    while (temp_top != NULL) // Liste bo√æ olana kadar
     {
-        temp_top = top->next; //top d¸¸mden bir ˆnceki d¸¸m¸ temp_top i˛aretÁisine ata
+        temp_top = top->next; //top d√º√∞√ºmden bir √∂nceki d√ºg√ºm√º temp_top i√æaret√ßisine ata
         free(top); // ilk elemani serbest birak
-        top = temp_top; // temp_top art˝k top isaretcisi olsun 
-        temp_top = temp_top->next; // temp_top isaretcisini bir sonraki d¸g¸me gˆndererek devam et
+        top = temp_top; // temp_top artik top isaretcisi olsun 
+        temp_top = temp_top->next; // temp_top isaretcisini bir sonraki d√ºg√ºme g√∂ndererek devam et
     }
     free(temp_top);
     top = NULL;
